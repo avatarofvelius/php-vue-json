@@ -30,10 +30,8 @@ h2 {
 div {
 	margin-top: 75px;
 }
-a {
-	color: #2288BB;
-}
 </style>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +41,7 @@ a {
 	<link rel="stylesheet" media="screen" href="_css/index.css" />
 
 	<!-- Script Libraries -->
-	<script type="text/javascript" src="_library/jquery.js"></script>
+	<!-- <script type="text/javascript" src="_library/jquery.js"></script> -->
 
 	<!-- Meta Information -->
 	<title>PHP Template 4192017</title>
@@ -55,10 +53,6 @@ a {
 </head>
 
 <body>
-
-		<a href="php.php">PHP Examples</a>
-			<br/>
-		<a href="vue.php">Vue Examples</a>
 
 <div>
 	<?php
@@ -123,42 +117,7 @@ Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And
 	?>
 </div>
 
-	<div id="app">
-	<h2>Vue.js Experiments</h2>
-		{{json}}
-	</div>
-
 </body>
-
-	<!-- Script Libraries -->
-	<script src="_library/vue.js"></script>
-	<!-- Scripts -->
-
-	<!-- Simple View Example
-	<script type="text/javascript">
-		var app = new Vue({
-			el: '#app',
-			data: {
-				message: "Hello PHP"
-			}
-		})
-	</script> -->
-
-	<!-- JSON Vue Example -->
-	<script type="text/javascript">
-	new Vue({
-	    el: '#app',
-	    data: {
-	        json: null
-	    },
-	    created: function () {
-	        var _this = this;
-	        $.getJSON('http://localhost/GitHub/sdhc-php/_data/individual.json', function (json) {
-	            _this.json = json;
-	        });
-	    }
-	});
-	</script>
 
 </html>
 
