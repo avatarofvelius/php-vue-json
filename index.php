@@ -17,6 +17,7 @@ $json = '
 ';
 */
 
+<<<<<<< HEAD
 $json = file_get_contents('_data/individual.json');
 
 $objects = json_decode($json, true);
@@ -33,6 +34,8 @@ $birth = "December 8th, 824";
 
 $last[] = end($objects);
 
+=======
+>>>>>>> origin/master
 ?>
 
 <style type="text/css">
@@ -71,6 +74,7 @@ div {
 
 <body>
 
+<<<<<<< HEAD
 <div>
 	<?php
 	/*
@@ -131,6 +135,24 @@ Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And
 
 	?>
 </div>
+=======
+	<?php
+	echo "<h2>JSON Array Results</h2>";
+	// Json Array Object
+	$objects = json_decode($json);
+	echo $objects[0]->name  . "<br/>";
+	echo $objects[0]->birth . "<br/>";
+
+
+	echo "<br/>";
+
+	// Associative Multi Dimensional Arrays
+	$objects = json_decode($json, true);
+	echo $objects[1]['name']  . "<br/>";
+	echo $objects[1]['birth'] . "<br/>";
+
+	?>
+>>>>>>> origin/master
 
 	<div id="app">
 		<h2>Vue.js Experiments</h2>
