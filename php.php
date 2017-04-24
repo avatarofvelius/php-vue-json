@@ -23,7 +23,10 @@ body {
 	background-color: #333333;
 	color: #DDDDDD;
 	text-align: center;
+<<<<<<< HEAD
 	font-family: Yu Gothic;
+=======
+>>>>>>> origin/master
 }
 h2 {
 	color: #2288BB;
@@ -31,6 +34,7 @@ h2 {
 div {
 	margin-top: 75px;
 }
+<<<<<<< HEAD
 a {
 	color: #2288BB;
 	text-decoration: none;
@@ -39,6 +43,8 @@ a:hover {
 	color: #55CCEE;
 	text-decoration: underline;
 }
+=======
+>>>>>>> origin/master
 </style>
 
 <!DOCTYPE html>

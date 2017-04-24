@@ -23,7 +23,10 @@ body {
 	background-color: #333333;
 	color: #DDDDDD;
 	text-align: center;
+<<<<<<< HEAD
 	font-family: Yu Gothic;
+=======
+>>>>>>> origin/master
 }
 h2 {
 	color: #2288BB;
@@ -33,11 +36,14 @@ div {
 }
 a {
 	color: #2288BB;
+<<<<<<< HEAD
 	text-decoration: none;
 }
 a:hover {
 	color: #55CCEE;
 	text-decoration: underline;
+=======
+>>>>>>> origin/master
 }
 </style>
 <!DOCTYPE html>
@@ -62,8 +68,13 @@ a:hover {
 
 <body>
 
+<<<<<<< HEAD
 		<a href="php.php">Php Examples</a>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=======
+		<a href="php.php">PHP Examples</a>
+			<br/>
+>>>>>>> origin/master
 		<a href="vue.php">Vue Examples</a>
 
 <div>
