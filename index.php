@@ -1,5 +1,5 @@
 <?php
-/*
+
 $json = '[
 	{
 		"name": "Albert Palenor",
@@ -25,7 +25,7 @@ echo "<br/>";
 $objects = json_decode($json, true);
 echo $objects[1]['name']  . "<br/>";
 echo $objects[1]['birth'] . "<br/>";
-*/
+
 ?>
 
 <!DOCTYPE html>
@@ -34,14 +34,14 @@ echo $objects[1]['birth'] . "<br/>";
 <head>
 
 	<!-- Web Page Layout -->
-	<link rel="stylesheet" media="screen" href="css/index.css" />
-	<link rel="stylesheet" media="screen" href="css/s_.css" />
+	<link rel="stylesheet" media="screen" href="_css/index.css" />
+
 	<!-- Script Libraries -->
-	<script type="text/javascript" src="lib/jquery.js"></script>
+	<!--<script type="text/javascript" src="_library/jquery.js"></script> -->
 
 	<!-- Meta Information -->
 	<title>PHP Template 4192017</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0;">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0">
 	<meta charset="utf-8">
 	<meta name="description" content="PHP Template">
 	<meta name="author" content="Matt T. Myers">
@@ -51,6 +51,7 @@ echo $objects[1]['birth'] . "<br/>";
 <body>
 
 	<div id="app">
+		<h2>Vue.js Experiments</h2>
 		{{ message }}
 	</div>
 
