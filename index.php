@@ -13,19 +13,6 @@ $json = '[
 	}
 	]';
 
-// Json Array Object
-$objects = json_decode($json);
-echo $objects[0]->name  . "<br/>";
-echo $objects[0]->birth . "<br/>";
-
-
-echo "<br/>";
-
-// Associative Multi Dimensional Arrays
-$objects = json_decode($json, true);
-echo $objects[1]['name']  . "<br/>";
-echo $objects[1]['birth'] . "<br/>";
-
 ?>
 
 <!DOCTYPE html>
@@ -50,9 +37,26 @@ echo $objects[1]['birth'] . "<br/>";
 
 <body>
 
+	<?php
+	echo "<h2>JSON Array Results</h2>";
+	// Json Array Object
+	$objects = json_decode($json);
+	echo $objects[0]->name  . "<br/>";
+	echo $objects[0]->birth . "<br/>";
+
+
+	echo "<br/>";
+
+	// Associative Multi Dimensional Arrays
+	$objects = json_decode($json, true);
+	echo $objects[1]['name']  . "<br/>";
+	echo $objects[1]['birth'] . "<br/>";
+
+	?>
+
 	<div id="app">
 		<h2>Vue.js Experiments</h2>
-		{{ message }}
+		<p v-text="message"></p>
 	</div>
 
 </body>
