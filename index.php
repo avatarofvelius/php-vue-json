@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 $json = file_get_contents('_data/individual.json');
 
 $objects = json_decode($json, true);
@@ -15,44 +14,8 @@ $name = "Marionette Irania";
 $gender = "Female";
 $birth = "December 8th, 824";
 
-=======
-/*
-$json = '
-[
-	{
-		"name": "Albert Palenor",
-		"gender": "Male",
-		"birth": "November 12th, 968"
-	},
-	{
-		"name": "Emilia Lancastle",
-		"gender": "Female",
-		"birth": "May 4th, 1286"
-	}
-	]
-';
-*/
-
-<<<<<<< HEAD
-$json = file_get_contents('_data/individual.json');
-
-$objects = json_decode($json, true);
-
-/*
-$name = "Emilia Lancastle";
-$gender = "Female";
-$birth = "May 4th, 1286";
-*/
-
-$name = "Marionette Irania";
-$gender = "Female";
-$birth = "December 8th, 824";
-
->>>>>>> origin/master
 $last[] = end($objects);
 
-=======
->>>>>>> origin/master
 ?>
 
 <style type="text/css">
@@ -67,15 +30,10 @@ h2 {
 div {
 	margin-top: 75px;
 }
-<<<<<<< HEAD
 a {
 	color: #2288BB;
 }
 </style>
-=======
-</style>
-
->>>>>>> origin/master
 <!DOCTYPE html>
 <html lang="en">
 
@@ -98,14 +56,10 @@ a {
 
 <body>
 
-<<<<<<< HEAD
 		<a href="php.php">PHP Examples</a>
 			<br/>
 		<a href="vue.php">Vue Examples</a>
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
 <div>
 	<?php
 	/*
@@ -123,18 +77,11 @@ echo "<h2>Unique JSON Import and Export</h2>";
 		echo "Name : " . $objects[2]['name'] . "<br/>";
 		echo "Last Array : " . $name . ".<br/>";
 		echo "this entry already exists. <br/>";
-<<<<<<< HEAD
 		echo "Not Adding to File. <br/><br/><br/>";
 
 		$objects = json_encode($objects, true);
 		echo "Current File :<br/><br/>";
 		echo  $objects;
-=======
-		echo "Not Adding to File. <br/>";
-
-		$objects = json_encode($objects, true);
-		echo "<br/>" . $objects;
->>>>>>> origin/master
 	}
 	else
 	{
@@ -146,12 +93,8 @@ echo "<h2>Unique JSON Import and Export</h2>";
 	);
 
 		$new_json = json_encode($objects, true);
-<<<<<<< HEAD
 		echo "Current File :<br/>";
 		echo $new_json;
-=======
-		echo "<br/>" . $new_json;
->>>>>>> origin/master
 
 		$fp = fopen('_data/individual.json', 'w');
 		fwrite($fp, json_encode($objects, true));
@@ -179,35 +122,10 @@ Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And
 
 	?>
 </div>
-<<<<<<< HEAD
 
 	<div id="app">
 	<h2>Vue.js Experiments</h2>
 		{{json}}
-=======
-=======
-	<?php
-	echo "<h2>JSON Array Results</h2>";
-	// Json Array Object
-	$objects = json_decode($json);
-	echo $objects[0]->name  . "<br/>";
-	echo $objects[0]->birth . "<br/>";
-
-
-	echo "<br/>";
-
-	// Associative Multi Dimensional Arrays
-	$objects = json_decode($json, true);
-	echo $objects[1]['name']  . "<br/>";
-	echo $objects[1]['birth'] . "<br/>";
-
-	?>
->>>>>>> origin/master
-
-	<div id="app">
-		<h2>Vue.js Experiments</h2>
-		<p v-text="message"></p>
->>>>>>> origin/master
 	</div>
 
 </body>
@@ -215,16 +133,6 @@ Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And
 	<!-- Script Libraries -->
 	<script src="_library/vue.js"></script>
 	<!-- Scripts -->
-
-	<!-- Simple View Example
-	<script type="text/javascript">
-		var app = new Vue({
-			el: '#app',
-			data: {
-				message: "Hello PHP"
-			}
-		})
-	</script> -->
 
 	<!-- JSON Vue Example -->
 	<script type="text/javascript">
