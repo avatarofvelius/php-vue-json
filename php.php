@@ -40,6 +40,7 @@ a:hover {
 	text-decoration: underline;
 }
 </style>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +50,7 @@ a:hover {
 	<link rel="stylesheet" media="screen" href="_css/index.css" />
 
 	<!-- Script Libraries -->
-	<script type="text/javascript" src="_library/jquery.js"></script>
+	<!-- <script type="text/javascript" src="_library/jquery.js"></script> -->
 
 	<!-- Meta Information -->
 	<title>PHP Template 4192017</title>
@@ -61,10 +62,6 @@ a:hover {
 </head>
 
 <body>
-
-		<a href="php.php">Php Examples</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="vue.php">Vue Examples</a>
 
 <div>
 	<?php
@@ -129,32 +126,7 @@ Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And
 	?>
 </div>
 
-	<div id="app">
-	<h2>Vue.js Experiments</h2>
-		{{json}}
-	</div>
-
 </body>
-
-	<!-- Script Libraries -->
-	<script src="_library/vue.js"></script>
-	<!-- Scripts -->
-
-	<!-- JSON Vue Example -->
-	<script type="text/javascript">
-	new Vue({
-	    el: '#app',
-	    data: {
-	        json: null
-	    },
-	    created: function () {
-	        var _this = this;
-	        $.getJSON('http://localhost/GitHub/sdhc-php/_data/individual.json', function (json) {
-	            _this.json = json;
-	        });
-	    }
-	});
-	</script>
 
 </html>
 
