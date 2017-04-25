@@ -1,0 +1,67 @@
+body {
+	background-color: #333333;
+	color: #DDDDDD;
+	text-align: center;
+	font-family: Yu Gothic;
+}
+#nav {
+	top: 0px;
+	left: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	margin: 0px auto;
+	position: fixed;
+	background-color: #282828;
+	border-bottom: 1px solid #888888;
+}
+div {
+	padding-top: 295px; /* -5px from fixed header */
+	padding-bottom: 300px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+h1 {
+	margin-top: 50px;
+}
+h2 {
+	color: #2288BB;
+}
+a {
+	color: #2288BB;
+	text-decoration: none;
+}
+a:hover {
+	color: #55CCEE;
+	text-decoration: underline;
+}
+hr {
+	width: 50%;
+	border-color: #888888;
+}
+ul {
+	list-style: none;
+	margin: auto;
+	padding: 0;
+}
+table {
+	margin: auto;
+}
+td {
+	border: 1px solid #2288BB;
+	text-align: center;
+}
+#doc {
+	margin-top: -10px;
+	padding-top: 50px;
+	padding-bottom: 400px;
+}
+#php {
+	padding-top: 100px;
+}
+#vue {
+	padding-top: 150px;
+}
+#app {
+	margin-bottom: 200px;
+}

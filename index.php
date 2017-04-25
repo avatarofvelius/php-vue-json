@@ -1,58 +1,11 @@
-<?php
 
-$json = file_get_contents('_data/individual.json');
-
-$objects = json_decode($json, true);
-
-/*
-$name = "Emilia Lancastle";
-$gender = "Female";
-$birth = "May 4th, 1286";
-*/
-
-$name = "Marionette Irania";
-$gender = "Female";
-$birth = "December 8th, 824";
-
-$last[] = end($objects);
-
-?>
-
-<style type="text/css">
-body {
-	background-color: #333333;
-	color: #DDDDDD;
-	text-align: center;
-<<<<<<< HEAD
-	font-family: Yu Gothic;
-=======
->>>>>>> origin/master
-}
-h2 {
-	color: #2288BB;
-}
-div {
-	margin-top: 75px;
-}
-a {
-	color: #2288BB;
-<<<<<<< HEAD
-	text-decoration: none;
-}
-a:hover {
-	color: #55CCEE;
-	text-decoration: underline;
-=======
->>>>>>> origin/master
-}
-</style>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
 	<!-- Web Page Layout -->
-	<link rel="stylesheet" media="screen" href="_css/index.css" />
+	<link rel="stylesheet" media="screen" href="index.css" />
 
 	<!-- Script Libraries -->
 	<script type="text/javascript" src="_library/jquery.js"></script>
@@ -66,18 +19,60 @@ a:hover {
 
 </head>
 
+<?php
+
+	$json = file_get_contents('_data/individual.json');
+
+	$objects = json_decode($json, true);
+
+	/*
+	$name = "Emilia Lancastle";
+	$gender = "Female";
+	$birth = "May 4th, 1286";
+	*/
+
+	$name = "Marionette Irania";
+	$gender = "Female";
+	$birth = "December 8th, 824";
+
+	$last[] = end($objects);
+
+?>
+
 <body>
 
-<<<<<<< HEAD
-		<a href="php.php">Php Examples</a>
+	<span id="nav">
+		<a href="#doc">Documentation</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="#php">Php Examples</a>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-=======
-		<a href="php.php">PHP Examples</a>
-			<br/>
->>>>>>> origin/master
-		<a href="vue.php">Vue Examples</a>
+		<a href="#vue">Vue Examples</a>
+	</span>
 
-<div>
+<!-- Doc Section -->
+<div id="doc">
+	<br/><br/>
+	<h1>Documentation</h1>
+	<hr />
+	<p>
+		<h2>Project Goals</h2>
+	<ul>
+		Integrate Better Vue Model Designs.
+	</ul>
+	<ul>
+		PHP Form For Adding Content.
+	</ul>
+	<ul>
+		Introduction To Laravel, Slim, And Symphony.
+	</ul>
+	</p>
+</div>
+
+<!-- PHP Section -->
+<div id="php">
+	<h1>Php Examples</h1>
+	<hr />
+
 	<?php
 	/*
 			Albert-0 Emilia-1 Irania-2
@@ -87,35 +82,39 @@ a:hover {
 			Number In Array [0 - i++]
 	*/
 
-echo "<h2>Unique JSON Import and Export</h2>";
+	echo "<h2>Unique JSON Import and Export</h2>";
 
-	if (in_array($name, $objects[2]))
-	{
-		echo "Name : " . $objects[2]['name'] . "<br/>";
-		echo "Last Array : " . $name . ".<br/>";
-		echo "this entry already exists. <br/>";
-		echo "Not Adding to File. <br/><br/><br/>";
+		if (in_array($name, $objects[2]))
+		{
+			echo "Name : " . $objects[2]['name'] . "<br/>";
+			echo "Last Array : " . $name . ".<br/>";
+			echo "this entry already exists. <br/>";
+			echo "Not Adding to File. <br/>";
 
-		$objects = json_encode($objects, true);
-		echo "Current File :<br/><br/>";
-		echo  $objects;
-	}
-	else
-	{
-		echo "Last Array is " . $name . ",<br/>"; "not " . $objects[2]['name'] . ".<br/>";
-		echo "Adding to File. <br/>";
+			$objects = json_encode($objects, true);
 
-		array_push($objects,
-					array('name'=> $name, 'gender'=> $gender, 'birth'=> $birth)
-	);
+			echo "<h2>Current File</h2>";
 
-		$new_json = json_encode($objects, true);
-		echo "Current File :<br/>";
-		echo $new_json;
+			echo  $objects;
+		}
+		else
+		{
+			echo "Last Array is " . $name . ",<br/>"; "not " . $objects[2]['name'] . ".<br/>";
+			echo "Adding to File. <br/>";
 
-		$fp = fopen('_data/individual.json', 'w');
-		fwrite($fp, json_encode($objects, true));
-		fclose($fp);
+			array_push($objects,
+						array('name'=> $name, 'gender'=> $gender, 'birth'=> $birth)
+		);
+
+			$new_json = json_encode($objects, true);
+
+			echo "<h2>Current File :</h2>";
+
+			echo $new_json;
+
+			$fp = fopen('_data/individual.json', 'w');
+			fwrite($fp, json_encode($objects, true));
+			fclose($fp);
 
 /*
 Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And With A Bit of Work, Write The File To Look The Way It Should.
@@ -123,11 +122,11 @@ Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And
 
 }
 ?>
-</div>
 
-<div>
-	<?php
-	echo "<h2>JSON Array Results</h2>";
+	<h2>JSON Injection Through For Loop</h2>
+
+<?php
+
 	$objects = json_decode($json, true);
 
 	for ($i = 0; $i < count($objects); $i++) {
@@ -137,14 +136,46 @@ Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And
 			echo "<br/><br/>";
 	}
 
-	?>
+?>
 </div>
 
-	<div id="app">
-	<h2>Vue.js Experiments</h2>
-		{{json}}
-	</div>
+<!-- Vue Section -->
+<div id="app">
+<h1 id="vue">Vue Examples</h1>
+<hr />
 
+	<!-- JSON Loop By Array -->
+	<h2>JSON Loop By Array</h2>
+	<ul>
+		<li v-for="json in json">
+			{{ json }}
+		</li>
+	</ul>
+
+	<!-- JSON Based On Element -->
+	<table>
+		<thead>
+			<h2>JSON Based On Element</h2>
+		</thead>
+
+		<tr>
+			<td v-for="json in json">
+				{{ json.name }}
+			</td>
+		</tr>
+		<tr>
+			<td v-for="json in json">
+				{{ json.gender }}
+			</td>
+		</tr>
+		<tr>
+			<td v-for="json in json">
+				{{ json.birth }}
+			</td>
+		</tr>
+	</table>
+
+</div>
 </body>
 
 	<!-- Script Libraries -->
@@ -169,6 +200,7 @@ Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And
 
 </html>
 
+
 <?php /*
 $json = '
 [{
@@ -181,4 +213,6 @@ $json = '
 		"gender": "Female",
 		"birth": "May 4th, 1286"
 }]';
+?>
+-->
 */ ?>
