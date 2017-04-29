@@ -43,9 +43,7 @@
 
 	<span id="nav">
 		<a href="#doc">Documentation</a>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="#php">Php Examples</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="#vue">Vue Examples</a>
 	</span>
 
@@ -145,7 +143,7 @@ Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And
 <hr />
 
 	<!-- JSON Loop By Array -->
-	<h2>JSON Loop By Array</h2>
+	<h2>Basic JSON Output Loop</h2>
 	<ul>
 		<li v-for="json in json">
 			{{ json }}
@@ -153,27 +151,28 @@ Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And
 	</ul>
 
 	<!-- JSON Based On Element -->
-	<table>
-		<thead>
-			<h2>JSON Based On Element</h2>
-		</thead>
+			<h2>JSON Items Based On Array</h2>
 
-		<tr>
-			<td v-for="json in json">
+			<p v-for="json in json">
 				{{ json.name }}
-			</td>
-		</tr>
-		<tr>
-			<td v-for="json in json">
+
 				{{ json.gender }}
-			</td>
-		</tr>
-		<tr>
-			<td v-for="json in json">
+
 				{{ json.birth }}
-			</td>
-		</tr>
-	</table>
+			</p>
+
+
+	<h2>Detailed JSON Loop </h2>
+	<ul>
+	  <li v-for="(json, index) in json">
+	    <p>
+			Index Number: {{ index }} <br>
+			Name: {{ json.name }} <br>
+			Gender: {{ json.gender }} <br>
+			Birth Date: {{ json.birth }}
+			</p>
+	  </li>
+	</ul>
 
 </div>
 </body>
@@ -191,7 +190,7 @@ Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And
 	    },
 	    created: function () {
 	        var _this = this;
-	        $.getJSON('http://localhost/GitHub/sdhc-php/_data/individual.json', function (json) {
+	        $.getJSON('_data/individual.json', function (json) {
 	            _this.json = json;
 	        });
 	    }
@@ -199,7 +198,6 @@ Using FWrite It Would Be A Good Idea To Print Each Entry To A Seperate Line, And
 	</script>
 
 </html>
-
 
 <?php /*
 $json = '

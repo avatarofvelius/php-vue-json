@@ -30,6 +30,8 @@ h2 {
 a {
 	color: #2288BB;
 	text-decoration: none;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 a:hover {
 	color: #55CCEE;
@@ -46,10 +48,6 @@ ul {
 }
 table {
 	margin: auto;
-}
-td {
-	border: 1px solid #2288BB;
-	text-align: center;
 }
 #doc {
 	margin-top: -10px;
